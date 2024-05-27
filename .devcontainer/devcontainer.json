@@ -1,6 +1,17 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers-community/templates/dart:1": {}
+	"name": "Java and Dart Development Container",
+	"build": {
+	  "dockerfile": "Dockerfile"
+	},
+	"postCreateCommand": "dart --version && java -version",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "vscjava.vscode-java-pack",
+		  "dart-code.dart-code",
+		  "dart-code.flutter"
+		]
+	  }
+	}
   }
-}
+  
